@@ -3,10 +3,10 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
-# Initialize Flask app
+
 app = Flask(__name__)
 
-# Configure database
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todos.db'  #  URI format wasnt propley formatted so i fixed this will onnect database in my enviorment under instance
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)  
